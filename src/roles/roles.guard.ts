@@ -12,6 +12,8 @@ export class RolesGuard implements CanActivate {
       context.getHandler(),
       context.getClass(),
     ]);
+
+    // if doesnt have roles decorator, then allow
     if (!requiredRoles) {
       return true;
     }
