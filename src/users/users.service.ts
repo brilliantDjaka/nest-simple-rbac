@@ -1,20 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-
-export type User = {
-  username: string;
-  password: string;
-};
+import { User } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
   private readonly users = [
     {
+      id: 1,
       username: 'brianrofiq',
       password: 'brianrofiq',
     },
     {
+      id: 1,
       username: 'admin',
       password: 'admin',
     },
